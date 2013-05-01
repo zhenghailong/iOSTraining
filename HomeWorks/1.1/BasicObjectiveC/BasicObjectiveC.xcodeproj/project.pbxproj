@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E14882917214538009E15F2 /* TestQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14882817214538009E15F2 /* TestQueue.m */; };
+		2E14882C1721454C009E15F2 /* TestStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14882B1721454C009E15F2 /* TestStack.m */; };
 		5405EF03171D454500C6E9F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5405EF02171D454500C6E9F5 /* UIKit.framework */; };
 		5405EF05171D454500C6E9F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5405EF04171D454500C6E9F5 /* Foundation.framework */; };
 		5405EF07171D454500C6E9F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5405EF06171D454500C6E9F5 /* CoreGraphics.framework */; };
@@ -21,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E14882717214538009E15F2 /* TestQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestQueue.h; sourceTree = "<group>"; };
+		2E14882817214538009E15F2 /* TestQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestQueue.m; sourceTree = "<group>"; };
+		2E14882A1721454C009E15F2 /* TestStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStack.h; sourceTree = "<group>"; };
+		2E14882B1721454C009E15F2 /* TestStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStack.m; sourceTree = "<group>"; };
 		5405EEFF171D454500C6E9F5 /* BasicObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5405EF02171D454500C6E9F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5405EF04171D454500C6E9F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +94,10 @@
 				5405EF1A171D454500C6E9F5 /* ViewController.h */,
 				5405EF1B171D454500C6E9F5 /* ViewController.m */,
 				5405EF1D171D454500C6E9F5 /* ViewController.xib */,
+				2E14882717214538009E15F2 /* TestQueue.h */,
+				2E14882817214538009E15F2 /* TestQueue.m */,
+				2E14882A1721454C009E15F2 /* TestStack.h */,
+				2E14882B1721454C009E15F2 /* TestStack.m */,
 				5405EF09171D454500C6E9F5 /* Supporting Files */,
 			);
 			path = BasicObjectiveC;
@@ -176,6 +186,8 @@
 				5405EF0F171D454500C6E9F5 /* main.m in Sources */,
 				5405EF13171D454500C6E9F5 /* AppDelegate.m in Sources */,
 				5405EF1C171D454500C6E9F5 /* ViewController.m in Sources */,
+				2E14882917214538009E15F2 /* TestQueue.m in Sources */,
+				2E14882C1721454C009E15F2 /* TestStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 				5405EF24171D454500C6E9F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

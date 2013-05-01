@@ -24,6 +24,7 @@
     self.tabBarController.viewControllers = @[viewController1, viewController2];
 
     // TODO : tabBarController の delegateを自分にセット
+    self.tabBarController.delegate = self;
 
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
@@ -72,15 +73,22 @@
 */
 
 
-/*
 // TODO
 // コメントアウトをはずすと、タブがタップされた時にこのメソッドが呼ばれます
 // YESを返すとタブが選択され、NOを返すと選択されません
 // モーダルを出したい時はモーダルを表示してNOを返してください
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
+    NSLog(@"tabBarController");
+    if ([viewController isKindOfClass:[MFTFirstViewController class]]) {
 
+        // モダル表示
+        MFTModalViewController *mVC = [[MFTModalViewController alloc] init] ;
+        [viewController presentViewController:mVC animated:YES completion:nil];
+
+        return NO;
+    }
+    return YES;
 }
-*/
 
 @end

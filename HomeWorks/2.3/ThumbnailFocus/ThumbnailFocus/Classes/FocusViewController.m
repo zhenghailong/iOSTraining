@@ -29,10 +29,12 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
 {
     [super viewDidAppear:animated];
     // ⬇Answer：
+    // 監視observer追加.向き変化したらメソッドorientationDidChangeNotification呼び出し
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(orientationDidChangeNotification:)
                                                  name:UIDeviceOrientationDidChangeNotification object:nil];
-    // ⬇Answer：    
+    // ⬇Answer：
+    // 向き変化の監視を開始する
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 }
 
@@ -40,14 +42,17 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
 {
     [super viewWillDisappear:animated];
     // ⬇Answer：
+    // 向き変化を監視するobserverを削除する
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
     // ⬇Answer：
+    // 監視を中止する
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-    // ⬇Answer：    
+    // ⬇Answer：
+    // 横置きサポート
     return UIInterfaceOrientationMaskPortrait;
 }
 
@@ -79,9 +84,11 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
     CGAffineTransform transform;
     NSTimeInterval duration = kDefaultOrientationAnimationDuration;
 
+    // 向きがかわってない場合は処理せず
     if([UIDevice currentDevice].orientation == self.previousOrientation)
         return;
 
+    // 向きが180度かわった場合は時間を２倍とする
     if((UIInterfaceOrientationIsLandscape([UIDevice currentDevice].orientation) && UIInterfaceOrientationIsLandscape(self.previousOrientation))
        || (UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation) && UIInterfaceOrientationIsPortrait(self.previousOrientation)))
     {
@@ -137,11 +144,14 @@ static NSTimeInterval const kDefaultOrientationAnimationDuration = 0.4;
         self.contentView.transform = transform;
         self.contentView.frame = frame;
     }
+
+    //向きを保持する
     self.previousOrientation = [UIDevice currentDevice].orientation;
 }
 
 #pragma mark - Notifications
 // ⬇Answer：こちはいつ呼ばれますか？
+// デバイスの向きがかわったときに呼ばれる
 - (void)orientationDidChangeNotification:(NSNotification *)notification
 {
     [self updateOrientationAnimated:YES];

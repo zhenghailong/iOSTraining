@@ -39,6 +39,9 @@
     // TODO
     // ボタンがタップされた時に呼ばれるメソッド
     // delegateを介してモーダルを消す
+    if([_delegate respondsToSelector:@selector(didPressCloseModal)]){
+        [_delegate didPressCloseModal];
+    }
 
 }
 

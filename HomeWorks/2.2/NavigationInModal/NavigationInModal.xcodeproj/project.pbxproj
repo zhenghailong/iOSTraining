@@ -93,10 +93,10 @@
 				5405EFF0171E78D100C6E9F5 /* NIMViewController.h */,
 				5405EFF1171E78D100C6E9F5 /* NIMViewController.m */,
 				5405EFF3171E78D100C6E9F5 /* NIMViewController.xib */,
-				5405EFDF171E78D100C6E9F5 /* Supporting Files */,
 				5405F008171E7A3300C6E9F5 /* NIMModalViewController.h */,
 				5405F009171E7A3300C6E9F5 /* NIMModalViewController.m */,
 				5405F00A171E7A3300C6E9F5 /* NIMModalViewController.xib */,
+				5405EFDF171E78D100C6E9F5 /* Supporting Files */,
 			);
 			path = NavigationInModal;
 			sourceTree = "<group>";
@@ -309,6 +309,7 @@
 				5405EFFA171E78D100C6E9F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

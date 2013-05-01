@@ -30,7 +30,14 @@
 #warning ⬇ HomeWork　iPadの場合は回転に対応してください。
 - (NSUInteger)supportedInterfaceOrientations
 {
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
+        // iPhone
+        return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
+    }
+
+    // iPad
+    return UIInterfaceOrientationMaskAll;
 }
 
 #warning ⬇ HomeWork

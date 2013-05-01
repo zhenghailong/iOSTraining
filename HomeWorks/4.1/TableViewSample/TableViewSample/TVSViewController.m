@@ -25,12 +25,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     _tableView.dataSource = self;
-    _tableView.delegate = self;
+    _tableView.delegate   = self;
     [_tableView registerNib:[UINib nibWithNibName:@"TVSCustomCell" bundle:nil] forCellReuseIdentifier:@"maimai"];
 
     _cellForCalcHeight = [_tableView dequeueReusableCellWithIdentifier:@"maimai"];
 
     //TODO : samplData.plist から NSArray を作成しましょう [1]
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* path = [bundle pathForResource:@"sampleData" ofType:@"plist"];
+    self.texts  = [NSArray arrayWithContentsOfFile:path];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +45,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //TODO : cellForCalcHeight の高さ計算メソッドを使って高さを計算しましょう
-    return 10;
+
+    NSString *text = _texts[indexPath.row];
+    float rowHeight = [_cellForCalcHeight calculateCellHeightWithText:text];
+
+    return rowHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -55,6 +62,7 @@
     NSString *identifier = @"maimai";
     TVSCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.bodyLabel.text = _texts[indexPath.row];
+    [cell.bodyLabel setFont:[UIFont systemFontOfSize:16.0f]];
     [cell.bodyLabel sizeToFit];
     return cell;
 }

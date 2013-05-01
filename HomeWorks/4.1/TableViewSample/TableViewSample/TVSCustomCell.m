@@ -30,11 +30,11 @@
 {
     // TODO : UILabel の高さ計算 [2]
     // HINT : (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode
+    CGFloat top    = 10.0f;
+    CGFloat bottom = 10.0f;
 
-    CGSize size;
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:16.0f] constrainedToSize:CGSizeMake(125.0f, 500.0f) lineBreakMode:NSLineBreakByWordWrapping];
 
-    CGFloat top = 20.0f;
-    CGFloat bottom = 20.0f;
     return size.height + top + bottom;
 }
 

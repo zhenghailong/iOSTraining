@@ -105,16 +105,16 @@
 				5405F0651725268000C6E9F5 /* TVSViewController.h */,
 				5405F0661725268000C6E9F5 /* TVSViewController.m */,
 				5405F0681725268000C6E9F5 /* TVSViewController.xib */,
+				5405F07A1726211800C6E9F5 /* TVSCustomCell.h */,
+				5405F07B1726211800C6E9F5 /* TVSCustomCell.m */,
+				5405F07D172621AB00C6E9F5 /* TVSCustomCell.xib */,
+				2A5C151D1726A966002A1D72 /* sampleData.plist */,
 				5405F0701725577800C6E9F5 /* niku.png */,
 				5405F07217261F9600C6E9F5 /* daisuke.jpg */,
 				5405F07417261F9C00C6E9F5 /* maimai.jpg */,
 				5405F0761726207200C6E9F5 /* fukidashi_left.png */,
 				5405F0781726207B00C6E9F5 /* fukidashi_right.png */,
 				5405F0541725268000C6E9F5 /* Supporting Files */,
-				5405F07A1726211800C6E9F5 /* TVSCustomCell.h */,
-				5405F07B1726211800C6E9F5 /* TVSCustomCell.m */,
-				5405F07D172621AB00C6E9F5 /* TVSCustomCell.xib */,
-				2A5C151D1726A966002A1D72 /* sampleData.plist */,
 			);
 			path = TableViewSample;
 			sourceTree = "<group>";
